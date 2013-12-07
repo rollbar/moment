@@ -713,16 +713,17 @@
         _relativeTime : {
             future : "in %s",
             past : "%s ago",
-            s : "a few seconds",
-            m : "a minute",
+            s : "1 second",
+            ss : "%d seconds",
+            m : "1 minute",
             mm : "%d minutes",
-            h : "an hour",
+            h : "1 hour",
             hh : "%d hours",
-            d : "a day",
+            d : "1 day",
             dd : "%d days",
-            M : "a month",
+            M : "1 month",
             MM : "%d months",
-            y : "a year",
+            y : "1 year",
             yy : "%d years"
         },
         relativeTime : function (number, withoutSuffix, string, isFuture) {
@@ -1427,15 +1428,16 @@
             hours = round(minutes / 60),
             days = round(hours / 24),
             years = round(days / 365),
-            args = seconds < 45 && ['s', seconds] ||
+            args = seconds === 1 && ['s'] ||
+                seconds < 60 && ['ss', seconds] ||
                 minutes === 1 && ['m'] ||
-                minutes < 45 && ['mm', minutes] ||
+                minutes < 60 && ['mm', minutes] ||
                 hours === 1 && ['h'] ||
-                hours < 22 && ['hh', hours] ||
+                hours < 24 && ['hh', hours] ||
                 days === 1 && ['d'] ||
-                days <= 25 && ['dd', days] ||
-                days <= 45 && ['M'] ||
-                days < 345 && ['MM', round(days / 30)] ||
+                days <= 30 && ['dd', days] ||
+                days <= 60 && ['M'] ||
+                days < 365 && ['MM', round(days / 30)] ||
                 years === 1 && ['y'] || ['yy', years];
         args[2] = withoutSuffix;
         args[3] = milliseconds > 0;
