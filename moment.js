@@ -713,18 +713,18 @@
         _relativeTime : {
             future : "in %s",
             past : "%s ago",
-            s : "1 second",
-            ss : "%d seconds",
-            m : "1 minute",
-            mm : "%d minutes",
-            h : "1 hour",
-            hh : "%d hours",
+            s : "1 sec",
+            ss : "%d secs",
+            m : "1 min",
+            mm : "%d mins",
+            h : "1 hr",
+            hh : "%d hrs",
             d : "1 day",
             dd : "%d days",
-            M : "1 month",
-            MM : "%d months",
-            y : "1 year",
-            yy : "%d years"
+            M : "1 mon",
+            MM : "%d mons",
+            y : "1 yr",
+            yy : "%d yrs"
         },
         relativeTime : function (number, withoutSuffix, string, isFuture) {
             var output = this._relativeTime[string];
