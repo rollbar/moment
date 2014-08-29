@@ -31,6 +31,11 @@ Master [![Build Status](https://travis-ci.org/moment/moment.png?branch=master)](
 Changelog
 =========
 
+### 2.4.0-rollbar.1
+
+* Changed labels to be shorter.
+
+
 ### 2.4.0
 
 * **Deprecate** globally exported moment, will be removed in next major
