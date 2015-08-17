@@ -10,7 +10,7 @@
     ************************************/
 
     var moment,
-        VERSION = '2.8.3-rollbar.1',
+        VERSION = '2.8.3-rollbar.2',
         // the global-scope this is NOT the global object in Node.js
         globalScope = typeof global !== 'undefined' ? global : this,
         oldGlobalMoment,

@@ -924,8 +924,8 @@
             hh : '%d hrs',
             d : '1 day',
             dd : '%d days',
-            M : '1 mon',
-            MM : '%d mons',
+            M : '1 mo',
+            MM : '%d mos',
             y : '1 yr',
             yy : '%d yrs'
         },
